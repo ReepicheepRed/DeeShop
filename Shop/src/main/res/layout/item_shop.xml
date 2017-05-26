@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <import type="com.deeshop.bean.Shop.Info"/>
+        <variable
+            name="shop"
+            type="Info"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:minHeight="@dimen/height_96px"
+        android:paddingLeft="@dimen/margin_28px"
+        android:paddingRight="@dimen/margin_28px">
+
+        <TextView
+            android:id="@+id/iShop_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@{shop.title}"
+            android:textColor="@color/black_1_c"
+            android:textSize="@dimen/text_32px" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/margin_14px"
+            app:srcCompat="@mipmap/liebiao_icon_jiantou" />
+
+        <ImageView
+            android:id="@+id/iShop_icon"
+            android:layout_width="@dimen/height_110px"
+            android:layout_height="@dimen/height_110px"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imageView"
+            android:layout_toStartOf="@+id/imageView"
+            android:visibility="@{shop.avatar.length() > 0 ? View.VISIBLE : View.GONE}"
+            app:circleIcon="@{shop.avatar}"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/iShop_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imageView"
+            android:layout_toStartOf="@+id/imageView"
+            android:text="@{shop.content}"
+            android:maxLines="1"
+            android:maxWidth="@dimen/height_200px"
+            android:ellipsize="end"
+            android:textColor="@color/gray_8_c"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+</layout>

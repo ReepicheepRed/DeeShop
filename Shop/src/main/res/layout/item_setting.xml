@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <import type="com.deeshop.bean.Setting"/>
+        <variable
+            name="setting"
+            type="Setting"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:minHeight="@dimen/height_96px"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_28px">
+
+        <ImageView
+            android:id="@+id/setting_icon"
+            android:layout_width="@dimen/height_36px"
+            android:layout_height="@dimen/height_36px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_30px"
+            android:src="@mipmap/help_icon"
+            app:circleIcon="@{setting.icon}"
+            app:isCircle="@{setting.isCircle}"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/margin_28px"
+            app:srcCompat="@mipmap/liebiao_icon_jiantou" />
+
+        <TextView
+            android:id="@+id/setting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/setting_icon"
+            android:layout_toRightOf="@+id/setting_icon"
+            android:text="@{setting.title}"
+            android:textColor="@color/black_1_c"
+            android:textSize="@dimen/text_32px" />
+    </RelativeLayout>
+</layout>

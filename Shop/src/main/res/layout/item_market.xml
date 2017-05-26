@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="com.deeshop.bean.Market.GoodlistBean"/>
+        <variable
+            name="goods"
+            type="GoodlistBean"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:paddingBottom="@dimen/margin_30px"
+        android:paddingLeft="@dimen/margin_28px"
+        android:paddingRight="@dimen/margin_68px"
+        android:paddingTop="@dimen/margin_30px">
+
+        <ImageView
+            android:id="@+id/iMarket_icon"
+            android:layout_width="@dimen/height_170px"
+            android:layout_height="@dimen/height_180px"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            app:image="@{goods.img}"
+            app:default="@{@drawable/shop_logo_default}"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/iMarket_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iMarket_icon"
+            android:layout_marginLeft="@dimen/margin_26px"
+            android:layout_marginTop="@dimen/margin_12px"
+            android:layout_toRightOf="@+id/iMarket_icon"
+            android:text="@{goods.goodname}"
+            android:textColor="@color/black_1_c"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textSize="@dimen/text_30px" />
+
+        <LinearLayout
+            android:id="@+id/iMarket_ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iMarket_ll2"
+            android:layout_marginLeft="@dimen/margin_26px"
+            android:layout_marginTop="@dimen/margin_65px"
+            android:layout_toRightOf="@id/iMarket_icon">
+
+            <TextView
+                android:id="@+id/iMarket_price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@{@string/market_price(goods.price)}"
+                android:textColor="@color/black_1_c"
+                android:textSize="@dimen/text_24px" />
+
+            <TextView
+                android:id="@+id/iMarket_distribution_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@{@string/market_distribute(goods.discount)}"
+                android:textColor="@color/black_1_c"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/iMarket_ll2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iMarket_icon"
+            android:layout_marginLeft="@dimen/margin_26px"
+            android:layout_marginTop="@dimen/margin_12px"
+            android:layout_toRightOf="@id/iMarket_icon"
+            android:baselineAligned="false">
+
+            <TextView
+                android:id="@+id/iMarket_profit_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/daixiao_kongxin"
+                android:gravity="center"
+                android:text="@{@string/market_profit(goods.profit)}"
+                android:textColor="@color/black_1_c"
+                android:textSize="@dimen/text_26px" />
+
+            <TextView
+                android:id="@+id/iMarket_sell_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/daixiao_shixin"
+                android:gravity="center"
+                android:text="@string/sell"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

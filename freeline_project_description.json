@@ -1,0 +1,149 @@
+{
+    "android_gradle_plugin_version": "2.3.0",
+    "apk_path": "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\build\\outputs\\apk\\DeeShop_4_v1.3_debug.apk",
+    "apt": {
+        "Shop": {
+            "aptArgs": [
+                "-Aandroid.databinding.artifactType=APPLICATION",
+                "-Aandroid.databinding.printEncodedErrors=0",
+                "-Aandroid.databinding.minApi=18",
+                "-Aandroid.databinding.isTestVariant=0",
+                "-Aandroid.databinding.enableDebugLogs=0",
+                "-Aandroid.databinding.sdkDir=D:\\Android\\sdk",
+                "-Aandroid.databinding.bindingBuildFolder=D:\\Android\\AndroidProjects\\DeeShop\\Shop\\build\\intermediates\\data-binding-compiler\\debug",
+                "-Aandroid.databinding.enableForTests=0",
+                "-Aandroid.databinding.modulePackage=com.deeshop",
+                "-Aandroid.databinding.generationalFileOutDir=D:\\Android\\AndroidProjects\\DeeShop\\Shop\\build\\intermediates\\bundles\\debug\\data-binding",
+                "-Aandroid.databinding.xmlOutDir=D:\\Android\\AndroidProjects\\DeeShop\\Shop\\build\\intermediates\\data-binding-info\\debug"
+            ],
+            "aptOutput": "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\build\\generated\\source\\apt\\debug",
+            "disableDiscovery": false,
+            "enabled": true,
+            "processor": null,
+            "processorPath": "C:\\Users\\zhiPeng.S\\.android\\build-cache\\591ae14458334b78c0d5334e27a5a24402a11f7f\\output\\jars\\classes.jar;C:\\Users\\zhiPeng.S\\.android\\build-cache\\62bb440d60198d5db1ab2ac6fd90855c05e0c903\\output\\jars\\classes.jar;C:\\Users\\zhiPeng.S\\.android\\build-cache\\3959271ff31f6c0522aa556a964dfd30e8cb2b99\\output\\jars\\classes.jar;C:\\Users\\zhiPeng.S\\.android\\build-cache\\8a9446f50e35c2dac509837a79f072b6480b325b\\output\\jars\\classes.jar;C:\\Users\\zhiPeng.S\\.android\\build-cache\\4bd5078d078f8cd2c39590457986ff529012b984\\output\\jars\\classes.jar;C:\\Users\\zhiPeng.S\\.android\\build-cache\\73647b9e36a9325c1205ac9d71d1a6edd0e18642\\output\\jars\\classes.jar;C:\\Users\\zhiPeng.S\\.android\\build-cache\\782dc5ce339b3eca03d83d59fa6f01e021b74a96\\output\\jars\\classes.jar;D:\\Android\\sdk\\extras\\m2repository\\com\\android\\support\\constraint\\constraint-layout-solver\\1.0.2\\constraint-layout-solver-1.0.2.jar;C:\\Users\\zhiPeng.S\\.android\\build-cache\\a2e0b3c4c2d03dccee9db807139ab40c5aa30870\\output\\jars\\classes.jar;C:\\Users\\zhiPeng.S\\.gradle\\caches\\modules-2\\files-2.1\\com.google.code.gson\\gson\\2.7\\751f548c85fa49f330cecbb1875893f971b33c4e\\gson-2.7.jar;C:\\Users\\zhiPeng.S\\.android\\build-cache\\d1b470bda4aaa592c33524a3617ff6a80e9bd911\\output\\jars\\classes.jar;C:\\Users\\zhiPeng.S\\.gradle\\caches\\modules-2\\files-2.1\\io.reactivex\\rxjava\\1.1.10\\2ac360e8a47601a8dfd044e646f05b99d151f2e0\\rxjava-1.1.10.jar;C:\\Users\\zhiPeng.S\\.android\\build-cache\\123a55afbe4bb381cf860ea70ca3660708db2c30\\output\\jars\\classes.jar;C:\\Users\\zhiPeng.S\\.gradle\\caches\\modules-2\\files-2.1\\com.github.bumptech.glide\\glide\\3.7.0\\9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4\\glide-3.7.0.jar;C:\\Users\\zhiPeng.S\\.android\\build-cache\\f1df29f7d793ca0d34578607e73adfeb600fd169\\output\\jars\\classes.jar;C:\\Users\\zhiPeng.S\\.android\\build-cache\\8cdb8dcaea1a40e40c00a02e08fab66098c27564\\output\\jars\\classes.jar;C:\\Users\\zhiPeng.S\\.android\\build-cache\\61d0f55ed27d51695aa250243267455ead130fce\\output\\jars\\classes.jar;C:\\Users\\zhiPeng.S\\.android\\build-cache\\458a722c3b39f5267093670e45aa5be930a9babe\\output\\jars\\classes.jar;C:\\Users\\zhiPeng.S\\.android\\build-cache\\4d05ccc6d9ef1656fde54d4fd7e7727f149b18a7\\output\\jars\\classes.jar;C:\\Users\\zhiPeng.S\\.android\\build-cache\\5c38296c0d768677a221ebea924669758195796d\\output\\jars\\classes.jar;C:\\Users\\zhiPeng.S\\.android\\build-cache\\3009fb255744a090413ec290855871273889b44a\\output\\jars\\classes.jar;C:\\Users\\zhiPeng.S\\.android\\build-cache\\3960f99df2dc75bbb44beabe3dfb61673a185ea3\\output\\jars\\classes.jar;D:\\Android\\sdk\\extras\\android\\m2repository\\com\\android\\support\\support-annotations\\25.2.0\\support-annotations-25.2.0.jar;C:\\Users\\zhiPeng.S\\.gradle\\caches\\modules-2\\files-2.1\\com.android.databinding\\baseLibrary\\2.3.0\\d63c4d23204cadf1390fd1bbca8c1b05396aed\\baseLibrary-2.3.0.jar;C:\\Users\\zhiPeng.S\\.android\\build-cache\\2afea034ad609bf33e2e21cbb70296656b478c2f\\output\\jars\\classes.jar;D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\main\\libs\\MobCommons-2017.0322.0931.jar;D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\main\\libs\\MobTools-2017.0322.0931.jar;D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\main\\libs\\ShareSDK-Core-2.8.2.jar;D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\main\\libs\\ShareSDK-Facebook-2.8.2.jar;D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\main\\libs\\ShareSDK-FacebookMessenger-2.8.2.jar;D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\main\\libs\\ShareSDK-Instagram-2.8.2.jar;D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\main\\libs\\ShareSDK-Line-2.8.2.jar;D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\main\\libs\\ShareSDK-Twitter-2.8.2.jar;C:\\Users\\zhiPeng.S\\.gradle\\caches\\modules-2\\files-2.1\\com.android.databinding\\compiler\\2.3.0\\d1a4d52d24f8ac733b61a4d6a807a18c009d6826\\compiler-2.3.0.jar;C:\\Users\\zhiPeng.S\\.gradle\\caches\\modules-2\\files-2.1\\com.googlecode.juniversalchardet\\juniversalchardet\\1.0.3\\cd49678784c46aa8789c060538e0154013bb421b\\juniversalchardet-1.0.3.jar"
+        }
+    },
+    "apt_libraries": {
+        "dagger": false,
+        "butterknife": false
+    },
+    "auto_dependency": true,
+    "build_cache_dir": "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\build\\freeline",
+    "build_directory": "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\build",
+    "build_script": "gradlew.bat :Shop:assembleDebug",
+    "build_script_work_directory": "",
+    "build_tools_directory": "D:\\Android\\sdk\\build-tools\\25.0.1",
+    "build_tools_version": "25.0.1",
+    "check_sources_md5": [
+        
+    ],
+    "compile_sdk_directory": "D:\\Android\\sdk\\platforms\\android-25",
+    "compile_sdk_version": "android-25",
+    "databinding": [
+        {
+            "isLibrary": false,
+            "minSdkVersion": 18,
+            "name": "Shop",
+            "packageName": "com.deeshop"
+        }
+    ],
+    "databinding_compiler_jar": "C:\\Users\\zhiPeng.S\\.gradle\\caches\\modules-2\\files-2.1\\com.android.databinding\\compiler\\2.3.0\\d1a4d52d24f8ac733b61a4d6a807a18c009d6826\\compiler-2.3.0.jar",
+    "databinding_modules": [
+        "Shop"
+    ],
+    "debug_package": "com.deeshop",
+    "exclude_dep_res_paths": [
+        
+    ],
+    "extra_dep_res_paths": [
+        
+    ],
+    "freeline_cache_dir": "D:\\Android\\AndroidProjects\\DeeShop",
+    "freeline_gradle_plugin_version": "0.8.7",
+    "ignore_resource_ids": [
+        "avd_hide_password_1",
+        "avd_hide_password_2",
+        "avd_hide_password_3",
+        "avd_show_password_1",
+        "avd_show_password_2",
+        "avd_show_password_3"
+    ],
+    "java_home": "D:\\Program Files\\Java\\jdk1.8.0_31",
+    "launcher": "com.deeshop.guide.SplashActivity",
+    "main_assets_directory": [
+        "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\debug\\assets",
+        "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\main\\assets"
+    ],
+    "main_jniLibs_directory": [
+        "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\debug\\jniLibs",
+        "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\main\\jniLibs"
+    ],
+    "main_jni_directory": [
+        "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\debug\\jni",
+        "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\main\\jni"
+    ],
+    "main_manifest_path": "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\main\\AndroidManifest.xml",
+    "main_project_dir": "Shop",
+    "main_project_name": "Shop",
+    "main_r_path": "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\build\\generated\\source\\r\\debug\\R.java",
+    "main_res_directory": [
+        "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\debug\\res",
+        "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\main\\res"
+    ],
+    "main_src_directory": [
+        "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\debug\\java",
+        "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\main\\java"
+    ],
+    "module_dependencies": {
+        "Shop": [
+            
+        ]
+    },
+    "modules": [
+        {
+            "name": "Shop",
+            "path": "D:\\Android\\AndroidProjects\\DeeShop\\Shop"
+        }
+    ],
+    "package": "com.deeshop",
+    "product_flavor": "",
+    "project_source_sets": {
+        "Shop": {
+            "main_assets_directory": [
+                "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\debug\\assets",
+                "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\main\\assets"
+            ],
+            "main_jniLibs_directory": [
+                "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\debug\\jniLibs",
+                "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\main\\jniLibs"
+            ],
+            "main_jni_directory": [
+                "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\debug\\jni",
+                "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\main\\jni"
+            ],
+            "main_manifest_path": "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\main\\AndroidManifest.xml",
+            "main_res_directory": [
+                "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\debug\\res",
+                "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\main\\res"
+            ],
+            "main_src_directory": [
+                "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\debug\\java",
+                "D:\\Android\\AndroidProjects\\DeeShop\\Shop\\src\\main\\java"
+            ]
+        }
+    },
+    "project_type": "gradle",
+    "retrolambda": {
+        "Shop": {
+            "enabled": true,
+            "mainClass": "net.orfjackal.retrolambda.Main",
+            "rtJar": "D:\\Program Files\\Java\\jdk1.8.0_31/jre/lib/rt.jar",
+            "supportIncludeFiles": false,
+            "targetJar": "C:\\Users\\zhiPeng.S\\.gradle\\caches\\modules-2\\files-2.1\\net.orfjackal.retrolambda\\retrolambda\\2.0.6\\222dd3b86257569bf8bbec5a1a5179a6413da7b6\\retrolambda-2.0.6.jar"
+        }
+    },
+    "root_dir": "D:\\Android\\AndroidProjects\\DeeShop",
+    "sdk_directory": "D:\\Android\\sdk",
+    "use_jdk8": true,
+    "use_system_gradle": false
+}

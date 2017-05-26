@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data >
+        <import type="android.view.View"/>
+        <import type="com.deeshop.ModifyActivity"/>
+        <import type="com.deeshop.bean.Modify"/>
+        <variable
+            name="activity"
+            type="ModifyActivity"/>
+        <variable
+            name="modify"
+            type="Modify"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_f6_c"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/actionbar_base"
+            layout_width="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_96px"
+            android:layout_marginTop="@dimen/margin_30px"
+            android:background="@android:color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/modify_et"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:afterTextChanged="@{activity.afterTextChanged}"
+                android:background="@null"
+                android:ems="10"
+                android:hint="@{@string/please_input_nickname(modify.title)}"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/margin_28px"
+                android:text="@={modify.content}"
+                android:textColor="@color/black_1_c"
+                android:textColorHint="@color/gray_b7_c"
+                android:textSize="@dimen/text_32px" />
+
+            <ImageView
+                android:id="@+id/modify_clear_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity.onClick}"
+                android:padding="@dimen/margin_28px"
+                android:visibility="@{modify.content.get().length() > 0 ? View.VISIBLE : View.GONE}"
+                app:srcCompat="@mipmap/login_input_icon_quxiao" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

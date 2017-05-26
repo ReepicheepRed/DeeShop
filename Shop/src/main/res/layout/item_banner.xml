@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	<data>
+		<import type="com.deeshop.bean.Banner.BannerlistBean"/>
+		<import type="com.deeshop.bean.Detail.GooddetialBean.GoodimgBean"/>
+		<variable
+			name="banner"
+			type="BannerlistBean"/>
+		<variable
+			name="detailBanner"
+			type="GoodimgBean"/>
+	</data>
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		>
+		<ImageView
+			android:id="@+id/bannerIv"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_gravity="center_vertical|center_horizontal"
+			android:scaleType="fitXY"
+			app:image="@{banner.img ?? detailBanner.path}"
+			app:default="@{@drawable/banner_img_default}"
+			/>
+	</LinearLayout>
+</layout>
+

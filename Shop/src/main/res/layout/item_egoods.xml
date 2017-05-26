@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data >
+        <import type="android.view.View"/>
+        <import type="android.content.ContentResolver"/>
+        <import type="com.deeshop.bean.Product.GoodlistBean.Images"/>
+        <variable
+            name="goods"
+            type="Images"/>
+    </data>
+    <FrameLayout
+        android:layout_width="@dimen/height_168px"
+        android:layout_height="@dimen/height_176px">
+
+        <ImageView
+            android:id="@+id/iEgoods_icon"
+            android:layout_width="@dimen/height_162px"
+            android:layout_height="@dimen/height_162px"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"
+            app:srcCompat="@mipmap/tianjiatupian_btn"
+            app:image="@{goods.path}"/>
+
+        <ImageView
+            android:id="@+id/iEgoods_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:visibility="@{goods.path.get().contains(ContentResolver.SCHEME_ANDROID_RESOURCE) ? View.GONE : View.VISIBLE}"
+            app:srcCompat="@mipmap/tianjiatupian_icon_quxiao" />
+    </FrameLayout>
+</layout>

@@ -1,0 +1,142 @@
+<resources>
+    <string name="app_name">One2Sell</string>
+    <string name="app_url">https://play.google.com/store/apps/details?id=com.luckybuy</string>
+    <string name="invite_content">ไม่มีสินค้าก็สามารถสร้างรายได้โดยเปิดร้านออนไลน์ในมือถือได้</string>
+
+    <string-array name="market_category">
+        <item>All</item>
+        <item>Women</item>
+        <item>Men</item>
+        <item>Makeup</item>
+        <item>Child</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="shop_intro">
+        <item>Shop Logo</item>
+        <item>Store Name</item>
+        <item>Welcomes</item>
+        <item>Identity</item>
+        <item>Phone</item>
+        <item>Facebook</item>
+        <item>Line</item>
+    </string-array>
+
+    <string-array name="setting_intro">
+        <item>Nickname</item>
+        <item>Help&amp;FAQ</item>
+        <item>About us</item>
+        <item>Rate us</item>
+        <item>Invite Friends</item>
+    </string-array>
+
+    <string-array name="promotion">
+        <item>Save the picture</item>
+        <item>copy the name &amp; link</item>
+        <item>copy the name</item>
+        <item>copy the link</item>
+        <item>cancel</item>
+    </string-array>
+
+    <string-array name="share">
+        <item>Facebook</item>
+        <item>Messenger</item>
+        <item>Line</item>
+        <item>Instagram</item>
+        <item>Twitter</item>
+        <item>CopyLink</item>
+    </string-array>
+
+    <string name="delete_success">delete success</string>
+    <string name="on_sale_success">on sale success</string>
+    <string name="off_shelves_success">off shelves success</string>
+    <string name="modify_success">modify success</string>
+    <string name="exit_tip">Press once again to exit program</string>
+
+    <string name="introduction">The most simple and easy to use mobile phone shop App</string>
+    <string name="register">Sign up</string>
+    <string name="register_account">Register Account</string>
+    <string name="login">Login</string>
+    <string name="phone_num">PhoneNum</string>
+    <string name="phone_num_tip">Input your phone num</string>
+    <string name="set_password">Set Password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="password">Password</string>
+    <string name="password_tip">Input your password</string>
+    <string name="forget_pwd_tip"><u>Forget Password</u></string>
+    <string name="next">Next</string>
+    <string name="protocol_tip"><![CDATA[Read and agree<font color= "#1c9ee8">《Terms os service and privacy》</font>]]></string>
+    <string name="done">Done</string>
+    <string name="verify">Verify</string>
+    <string name="verify_tip">Input your verifycode</string>
+    <string name="get_verify">get verify</string>
+    <string name="set_shop_name_tip">Set your shop name</string>
+    <string name="facebook">facebook</string>
+    <string name="take_photo">Take a photo</string>
+    <string name="from_album">From Album</string>
+    <string name="cancel">cancel</string>
+    <string name="select_picture_error">The image format is incorrect</string>
+    <string name="market">Market</string>
+    <string name="products">Products</string>
+    <string name="shop">Shop</string>
+    <string name="setting">Setting</string>
+    <string name="market_price">price:$%1$s</string>
+    <string name="market_distribute">%1$d distribute</string>
+    <string name="market_profit">profit:$%1$s</string>
+    <string name="sell">Sell</string>
+    <string name="sale">Sale</string>
+    <string name="off_shelve">Off shelve</string>
+    <string name="preview">Preview</string>
+    <string name="promotion">Promotion</string>
+    <string name="share">Share</string>
+    <string name="discard">discard</string>
+    <string name="distribution">distribution</string>
+    <string name="add_goods">Add goods</string>
+    <string name="unauthorized">unauthorized</string>
+    <string name="authenticating">authenticating&#8230;</string>
+    <string name="authorized">Authorized</string>
+    <string name="contact_information">Contact information</string>
+    <string name="contact">Contact</string>
+    <string name="on_sale">On sale</string>
+    <string name="set_up_shop">Set Up Shop</string>
+    <string name="tel_mobile">Tel/Mobile:</string>
+    <string name="contact_facebook">Facebook:</string>
+    <string name="contact_line">Line ID:</string>
+    <string name="certification">Certification</string>
+    <string name="into">Into</string>
+    <string name="items">Items</string>
+    <string name="distributors">Distributors</string>
+    <string name="detail_distribution">%1$d people in the sale</string>
+    <string name="sourcing_details">Sourcing details</string>
+    <string name="sold_out">Sold out</string>
+    <string name="please_input_item_name">Please Input Item Name</string>
+    <string name="description">Description</string>
+    <string name="please_input_price">Please Input Price</string>
+    <string name="please_input_profit">Please Input Profit</string>
+    <string name="category">Category</string>
+    <string name="select_category">Select Category</string>
+    <string name="price_$">Price($)</string>
+    <string name="profit">Profit</string>
+    <string name="delete">delete</string>
+    <string name="cap_distribution">Distribution</string>
+    <string name="edit_item_detail">Edit Item Detail</string>
+    <string name="upload_identification_card">Upload Identification Card</string>
+    <string name="id_card_tip">(Ensure that all  information is clearly visible)</string>
+    <string name="upload">Upload</string>
+    <string name="authentication">Authentication</string>
+    <string name="account">Account</string>
+    <string name="nickname">NickName</string>
+    <string name="change_password">Change Password</string>
+    <string name="logout">Logout</string>
+    <string name="please_input_nickname">Please input %1$s</string>
+    <string name="edit_nickname">Edit %1$s</string>
+    <string name="msg">Message</string>
+    <string name="phone_tip">Please input phone number</string>
+    <string name="alter">Change of goods</string>
+    <string name="alter_tip">The supplier has stopped distributing the item</string>
+    <string name="text_copied">Text copied to clipboard.</string>
+    <string name="search_input_tip">input goods</string>
+    <string name="clear_all">Clear all</string>
+    <string name="history">History</string>
+
+</resources>

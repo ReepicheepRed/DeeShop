@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View"/>
+        <import type="com.deeshop.login.RegisterActivity"/>
+        <import type="com.deeshop.bean.Register"/>
+        <variable
+            name="registerActivity"
+            type="RegisterActivity"/>
+        <variable
+            name="register"
+            type="Register"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_f6_c"
+        tools:context="com.deeshop.MainActivity">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/actionbar_base"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="105dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="@dimen/margin_28px"
+            android:layout_marginTop="@dimen/margin_74px"
+            android:background="@android:color/white"
+            android:gravity="center_vertical|start"
+            android:padding="@dimen/margin_24px"
+            android:text="@string/phone_num"
+            android:textColor="@color/black_1_c"
+            android:textSize="@dimen/text_30px"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include"
+            android:layout_marginStart="@dimen/margin_28px" />
+
+        <EditText
+            android:id="@+id/register_phone_et"
+            android:layout_width="242dp"
+            android:layout_height="48dp"
+            android:background="@android:color/white"
+            android:digits="0123456789"
+            android:ems="10"
+            android:hint="@string/phone_num_tip"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textColor="@color/black_1_c"
+            android:textColorHint="@color/gray_b7_c"
+            android:textCursorDrawable="@mipmap/input_wenzi_tishixian"
+            android:textSize="@dimen/text_30px"
+            android:text="@={register.phoneNum}"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toRightOf="@+id/textView3"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Button
+            android:id="@+id/register_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_46px"
+            android:background="@drawable/background_login"
+            android:gravity="center"
+            android:onClick="@{registerActivity.onClick}"
+            android:textAllCaps="false"
+            android:text="@string/next"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_32px"
+            android:enabled="@{register.enabled}"
+            app:layout_constraintHorizontal_bias="0.513"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/register_phone_et" />
+
+        <ImageView
+            android:id="@+id/register_clear_phone_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:onClick="@{registerActivity.onClick}"
+            android:padding="@dimen/margin_24px"
+            android:visibility="@{register.phoneNum.get().length() !=0 ? View.VISIBLE : View.GONE}"
+            app:layout_constraintRight_toRightOf="@+id/register_phone_et"
+            app:layout_constraintTop_toTopOf="@+id/register_phone_et"
+            app:srcCompat="@mipmap/login_input_icon_quxiao"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/register_protocol_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_30px"
+            android:onClick="@{registerActivity.onClick}"
+            android:text="@string/protocol_tip"
+            android:textColor="@color/gray_b7_c"
+            android:textSize="@dimen/text_22px"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/register_btn" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

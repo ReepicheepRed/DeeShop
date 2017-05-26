@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data >
+        <import type="com.deeshop.bean.Pop"/>
+        <variable
+            name="pop"
+            type="Pop"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/pop_contact"
+            android:layout_width="@dimen/height_262px"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:background="@mipmap/lianxi_bg"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <TextView
+                android:id="@+id/pop_phone_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_70px"
+                android:drawableLeft="@mipmap/dianhua_icon"
+                android:drawablePadding="@dimen/margin_20px"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/margin_22px"
+                android:text="@{pop.string1}"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_32px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_47_c" />
+
+            <TextView
+                android:id="@+id/pop_facebook_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_70px"
+                android:drawableLeft="@mipmap/facebook_icon"
+                android:drawablePadding="@dimen/margin_20px"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/margin_22px"
+                android:text="@{pop.string2}"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_32px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_1px"
+                android:background="@color/gray_47_c" />
+
+            <TextView
+                android:id="@+id/pop_instagram_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_70px"
+                android:drawableLeft="@mipmap/ins_icon"
+                android:drawablePadding="@dimen/margin_20px"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/margin_22px"
+                android:text="@{pop.string3}"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_32px" />
+
+        </LinearLayout>
+    </android.support.constraint.ConstraintLayout>
+</layout>

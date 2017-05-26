@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/market_ptr"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/gray_f5_c">
+
+                <FrameLayout
+                    android:id="@+id/bannerFl"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@android:color/white">
+
+                    <com.deeshop.gadget.ViewFlowForViewPager
+                        android:id="@+id/bannerVf"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical">
+
+                        <com.deeshop.gadget.CircleFlowIndicator
+                            android:id="@+id/bannerFi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="2dp"
+                            app:activeColor="#ff213b"
+                            app:activeType="fill"
+                            app:circleSeparation="20dp"
+                            app:inactiveColor="#ffffff"
+                            app:inactiveType="fill"
+                            app:radius="4dp" />
+                    </LinearLayout>
+                </FrameLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/market_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+        </ScrollView>
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+</layout>

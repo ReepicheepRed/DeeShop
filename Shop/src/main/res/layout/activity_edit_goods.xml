@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <import type="android.text.Html"/>
+        <import type="com.deeshop.EditGoodsActivity"/>
+        <import type="com.deeshop.bean.Goods"/>
+        <variable
+            name="eGoodsActivity"
+            type="EditGoodsActivity"/>
+        <variable
+            name="goods"
+            type="Goods"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/actionbar_base"
+            layout_width="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_20px"
+                    android:background="@color/gray_f6_c"/>
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_86px"
+                    android:background="@null"
+                    android:ems="10"
+                    android:hint="@string/please_input_item_name"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="@dimen/margin_28px"
+                    android:maxLines="1"
+                    android:text="@={goods.goodname}"
+                    android:textColor="@color/black_1_c"
+                    android:textColorHint="@color/gray_b7_c"
+                    android:textSize="@dimen/text_30px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_1px"
+                    android:layout_marginLeft="@dimen/margin_28px"
+                    android:background="@color/divider_eb_c" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/eGoods_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_400px"
+                    android:layout_marginBottom="@dimen/margin_20px"
+                    android:layout_marginLeft="@dimen/margin_28px"
+                    android:layout_marginRight="@dimen/margin_28px"
+                    android:layout_marginTop="@dimen/margin_20px"
+                    android:visibility="visible" />
+
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_224px"
+                    android:background="@null"
+                    android:ems="10"
+                    android:gravity="top"
+                    android:hint="@string/description"
+                    android:inputType="textMultiLine|textImeMultiLine|textPersonName"
+                    android:paddingLeft="@dimen/margin_28px"
+                    android:paddingRight="@dimen/margin_28px"
+                    android:scrollHorizontally="false"
+                    android:singleLine="false"
+                    android:text="@={goods.content}"
+                    android:textColor="@color/black_1_c"
+                    android:textColorHint="@color/gray_b7_c"
+                    android:textSize="14sp"
+                    android:onTouch="@{goods.onTouch}"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_20px"
+                    android:background="@color/gray_f6_c"/>
+
+                <include
+                    android:id="@+id/include_edit_goods"
+                    layout="@layout/include_edit_goods"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:goods="@{goods}"
+                    app:eGoodsActivity="@{eGoodsActivity}"
+                    />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_1px"
+            android:background="@color/divider_eb_c"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_96px"
+            android:orientation="horizontal"
+            android:visibility="@{goods.isShow ? View.VISIBLE : View.GONE}">
+
+            <TextView
+                android:id="@+id/eGoods_off_shelve_tv"
+                android:layout_width="@dimen/height_448px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/xiajia_icon"
+                android:drawablePadding="@dimen/margin_10px"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/height_180px"
+                android:onClick="@{eGoodsActivity.onClick}"
+                android:text="@string/off_shelve"
+                android:textColor="@color/black_1_c"
+                android:textSize="@dimen/text_30px" />
+
+            <TextView
+                android:id="@+id/eGoods_delete_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/red_primary_c"
+                android:gravity="center"
+                android:onClick="@{eGoodsActivity.onClick}"
+                android:text="@string/delete"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_34px" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.deeshop.EditGoodsActivity"/>
+        <import type="com.deeshop.bean.Goods"/>
+        <variable
+            name="eGoodsActivity"
+            type="EditGoodsActivity"/>
+        <variable
+            name="goods"
+            type="Goods"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/eGoods_category_ll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_96px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:onClick="@{eGoodsActivity.onClick}"
+            android:paddingLeft="@dimen/margin_28px"
+            android:paddingRight="@dimen/margin_28px">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/category"
+                android:textColor="@color/black_1_c"
+                android:textSize="@dimen/text_32px" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_18px"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="@{goods.type}"
+                android:textColor="@color/black_1_c"
+                android:textSize="@dimen/text_32px" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@mipmap/liebiao_icon_jiantou" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_1px"
+            android:layout_marginLeft="@dimen/margin_28px"
+            android:background="@color/divider_eb_c" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_96px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_28px"
+            android:paddingRight="@dimen/margin_28px">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/cap_distribution"
+                android:textColor="@color/black_1_c"
+                android:textSize="@dimen/text_32px" />
+
+            <Switch
+                android:id="@+id/eGoods_swi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_distribution"
+                android:onClick="@{eGoodsActivity.onClick}"
+                android:checked="@{goods.isDis}"
+                android:thumb="@null"
+                android:track="@null"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_20px"
+            android:background="@color/gray_f6_c" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_96px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_28px"
+            android:paddingRight="@dimen/margin_28px">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="@dimen/height_120px"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/price_$"
+                android:textColor="@color/black_1_c"
+                android:textSize="@dimen/text_32px" />
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:ems="10"
+                android:hint="@string/please_input_price"
+                android:inputType="textPersonName"
+                android:paddingLeft="@dimen/margin_30px"
+                android:text="@={goods.price}"
+                android:textColor="@color/black_1_c"
+                android:textColorHint="@color/gray_b7_c"
+                android:textSize="@dimen/text_32px" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_1px"
+            android:layout_marginLeft="@dimen/margin_28px"
+            android:background="@color/divider_eb_c" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_96px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_28px">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="@dimen/height_120px"
+                android:layout_height="wrap_content"
+                android:text="@string/profit"
+                android:textColor="@color/black_1_c"
+                android:textSize="@dimen/text_32px" />
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:ems="10"
+                android:hint="@string/please_input_profit"
+                android:inputType="textPersonName"
+                android:paddingLeft="@dimen/margin_30px"
+                android:text="@={goods.profit}"
+                android:textColor="@color/black_1_c"
+                android:textColorHint="@color/gray_b7_c"
+                android:textSize="@dimen/text_32px" />
+
+            <ImageView
+                android:id="@+id/eGoods_rule_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_28px"
+                android:onClick="@{eGoodsActivity.onClick}"
+                app:srcCompat="@mipmap/wenhao_icon" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_30px"
+            android:background="@color/gray_f6_c" />
+    </LinearLayout>
+</layout>

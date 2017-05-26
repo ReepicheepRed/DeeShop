@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <import type="com.deeshop.MainActivity"/>
+        <variable
+            name="mainActivity"
+            type="MainActivity"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.deeshop.MainActivity"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/main_fl"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_1px"
+            android:background="@color/gray_e5_c" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_98px"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/margin_8px"
+            android:paddingTop="@dimen/margin_14px">
+
+            <TextView
+                android:id="@+id/main_market_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/margin_8px"
+                android:drawableTop="@drawable/selector_nav_market"
+                android:gravity="center_horizontal"
+                android:onClick="@{mainActivity.onClick}"
+                android:text="@string/market"
+                android:textColor="@color/gray_7b_c"
+                android:textSize="@dimen/text_20px" />
+
+            <TextView
+                android:id="@+id/main_products_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/margin_8px"
+                android:drawableTop="@drawable/selector_nav_product"
+                android:gravity="center_horizontal"
+                android:onClick="@{mainActivity.onClick}"
+                android:text="@string/products"
+                android:textColor="@color/gray_7b_c"
+                android:textSize="@dimen/text_20px" />
+
+            <TextView
+                android:id="@+id/main_shop_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/margin_8px"
+                android:drawableTop="@drawable/selector_nav_shop"
+                android:gravity="center_horizontal"
+                android:onClick="@{mainActivity.onClick}"
+                android:text="@string/shop"
+                android:textColor="@color/gray_7b_c"
+                android:textSize="@dimen/text_20px" />
+
+            <TextView
+                android:id="@+id/main_setting_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/margin_8px"
+                android:drawableTop="@drawable/selector_nav_setting"
+                android:gravity="center_horizontal"
+                android:onClick="@{mainActivity.onClick}"
+                android:text="@string/setting"
+                android:textSize="@dimen/text_20px" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>
+

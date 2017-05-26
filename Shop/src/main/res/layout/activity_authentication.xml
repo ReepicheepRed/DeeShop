@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data >
+        <import type="android.view.View"/>
+        <import type="com.deeshop.AuthenticationActivity"/>
+        <import type="com.deeshop.bean.Auth"/>
+        <variable
+            name="activity"
+            type="AuthenticationActivity"/>
+        <variable
+            name="auth"
+            type="Auth"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/actionbar_base"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/auth_tip_ll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_60px"
+            android:background="@color/pink_ffebeb_c"
+            android:visibility="@{auth.isShow ? View.VISIBLE : View.GONE}"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/tishi_icon"
+                android:drawablePadding="@dimen/margin_12px"
+                android:text="@string/certification"
+                android:textColor="@color/black_1_c" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="@dimen/height_384px"
+            android:layout_height="@dimen/height_236px"
+            android:layout_marginTop="@dimen/margin_158px">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@mipmap/xiangpianbiankuan_left" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                app:srcCompat="@mipmap/xiangpianbiankuan_under_left" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                app:srcCompat="@mipmap/xiangpianbiankuan_right" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                app:srcCompat="@mipmap/xiangpianbiankuan_under_right" />
+
+            <ImageView
+                android:id="@+id/auth_id_card_iv"
+                android:layout_width="@dimen/height_340px"
+                android:layout_height="@dimen/height_200px"
+                android:layout_gravity="center"
+                android:scaleType="fitXY"
+                android:clickable="@{auth.enabled}"
+                app:srcCompat="@mipmap/shenfenzhengshili_img"
+                app:image="@{auth.url}"/>
+
+            <ImageView
+                android:id="@+id/auth_add_picture_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="@{activity.onClick}"
+                android:visibility="@{!auth.isShow ? View.VISIBLE : View.GONE}"
+                app:srcCompat="@mipmap/tianjiatupian_btn_cer" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_28px"
+            android:gravity="center"
+            android:text="@string/upload_identification_card"
+            android:textColor="@color/black_1_c"
+            android:textSize="@dimen/text_26px" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_12px"
+            android:gravity="center"
+            android:text="@string/id_card_tip"
+            android:textColor="@color/gray_8_c"
+            android:textSize="@dimen/text_22px" />
+
+        <Button
+            android:id="@+id/auth_upload_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_60px"
+            android:background="@drawable/background_identification"
+            android:onClick="@{activity.onClick}"
+            android:enabled="@{auth.enabled}"
+            android:text="@string/upload"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_32px" />
+
+    </LinearLayout>
+</layout>

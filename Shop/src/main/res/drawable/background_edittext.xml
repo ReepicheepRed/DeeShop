@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="line" >
+
+    <solid android:color="@color/divider_eb_c" />
+
+    <size
+        android:height="1dp"
+        android:width="@dimen/height_582px" />
+
+</shape>

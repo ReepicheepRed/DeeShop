@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="com.deeshop.bean.Pop"/>
+        <variable
+            name="pop"
+            type="Pop"/>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/pop_share_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_60"
+        android:orientation="vertical">
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/pop_share_rv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_436px"
+            android:overScrollMode="never"
+            android:background="@android:color/white"
+            android:paddingLeft="@dimen/margin_100px"
+            android:paddingTop="@dimen/margin_38px" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_1px"
+            android:background="@color/divider_eb_c" />
+
+        <TextView
+            android:id="@+id/pop_share_cancel_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_96px"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/black_1_c"
+            android:textSize="@dimen/text_32px" />
+
+    </LinearLayout>
+</layout>

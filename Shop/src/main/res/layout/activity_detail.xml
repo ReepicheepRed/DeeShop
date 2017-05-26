@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="com.deeshop.DetailActivity"/>
+        <import type="com.deeshop.bean.Title"/>
+        <import type="com.deeshop.bean.Detail.GooddetialBean"/>
+        <variable
+            name="title"
+            type="Title"/>
+        <variable
+            name="detail"
+            type="GooddetialBean"/>
+        <variable
+            name="detailActivity"
+            type="DetailActivity"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/include_detail"
+            layout="@layout/actionbar_base"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="@{title}"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/detail_bannerFl"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_780px"
+                    android:background="@android:color/white"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.deeshop.gadget.ViewFlowForScrollView
+                        android:id="@+id/detail_bannerVf"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical">
+
+                        <com.deeshop.gadget.CircleFlowIndicator
+                            android:id="@+id/detail_bannerFi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:padding="2dp"
+                            app:activeColor="#ff213b"
+                            app:activeType="fill"
+                            app:circleSeparation="20dp"
+                            app:inactiveColor="#ffffff"
+                            app:inactiveType="fill"
+                            app:radius="4dp" />
+                    </LinearLayout>
+                </FrameLayout>
+                <include
+                    android:id="@+id/include_detail_describe"
+                    layout="@layout/include_detail_describe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:detail="@{detail}"
+                    app:detailActivity="@{detailActivity}"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_1px"
+            android:background="@color/divider_eb_c"/>
+
+        <LinearLayout
+            android:id="@+id/detail_bottom_ll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_84px"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/detail_contact_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:text="@string/contact"
+                android:textAllCaps="false"
+                android:textColor="@color/black_1_c"
+                android:textSize="@dimen/text_32px"
+                android:onClick="@{detailActivity.onClick}"/>
+
+            <Button
+                android:id="@+id/detail_sale_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/red_primary_c"
+                android:text="@{detail.exist == 0 ? @string/on_sale : @string/sold_out}"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_32px"
+                android:onClick="@{detailActivity.onClick}"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/detail_set_up_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_96px"
+            android:background="@color/red_primary_c"
+            android:text="@string/set_up_shop"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_34px"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</layout>

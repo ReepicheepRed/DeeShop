@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="com.deeshop.CreateShopActivity"/>
+        <import type="com.deeshop.bean.CShop"/>
+        <variable
+            name="activity"
+            type="CreateShopActivity"/>
+        <variable
+            name="cShop"
+            type="CShop"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/activity_create_shop_cl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_f6_c"
+        tools:context="com.deeshop.MainActivity">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="209dp"
+            android:layout_marginEnd="@dimen/margin_64px"
+            android:layout_marginLeft="@dimen/margin_64px"
+            android:layout_marginRight="@dimen/margin_64px"
+            android:layout_marginStart="@dimen/margin_64px"
+            android:layout_marginTop="@dimen/margin_140px"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/margin_20px"
+            android:paddingRight="@dimen/margin_20px"
+            android:paddingTop="@dimen/margin_132px"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/c_shop_avatar_iv">
+
+            <EditText
+                android:id="@+id/c_shop_name_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_96px"
+                android:background="@null"
+                android:drawableBottom="@drawable/background_edittext"
+                android:ems="10"
+                android:hint="@string/set_shop_name_tip"
+                android:inputType="textPersonName"
+                android:text="@={cShop.name}"
+                android:textColorHint="@color/gray_b7_c" />
+
+            <View
+                android:layout_width="@dimen/height_582px"
+                android:layout_height="0.5dp"
+                android:background="@color/divider_eb_c" />
+
+            <EditText
+                android:id="@+id/c_shop_fb_et"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_96px"
+                android:background="@null"
+                android:drawableBottom="@drawable/background_edittext"
+                android:ems="10"
+                android:hint="@string/facebook"
+                android:inputType="textPersonName"
+                android:text="@={cShop.facebook}"
+                android:textColorHint="@color/gray_b7_c" />
+
+            <View
+                android:layout_width="@dimen/height_582px"
+                android:layout_height="0.5dp"
+                android:background="@color/divider_eb_c" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/c_shop_avatar_iv"
+            android:layout_width="@dimen/height_226px"
+            android:layout_height="@dimen/height_230px"
+            android:layout_marginTop="@dimen/margin_100px"
+            android:onClick="@{activity.onClick}"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include_c_shop"
+            app:srcCompat="@mipmap/btn_tianjiatouxiang"
+            app:circleIcon="@{cShop.avatar}"/>
+
+        <include
+            android:id="@+id/include_c_shop"
+            layout="@layout/actionbar_base"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</layout>
+
