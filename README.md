@@ -62,11 +62,11 @@ I start my morning with a cup of coffee and
 
 [ny times]: http://www.nytimes.com/
 
-![alt text](img.jpg "Title")
+![alt text](img.png "Title")
 
 ![alt text][id]
 
-[id]: img.jpg "Title"
+[id]: img.png "Title"
 
 I strongly recommend against using any `<blink>` tags.
 
